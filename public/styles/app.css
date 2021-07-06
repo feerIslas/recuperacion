@@ -1,0 +1,21 @@
+body {
+    padding: 5rem;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    color: teal;
+}
+
+a {
+    color: #00B7FF;
+  }
+
+h5 {
+    color: grey;
+}
+
+div .light-blue {
+    padding: 2em;
+    border-radius: 1em;
+}

@@ -1,0 +1,52 @@
+{
+  "name": "projnotes",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "SET NODE_ENV = production & node ./dist-server/bin/www",
+    "watch:dev": "SET NODE_ENV = development & babel-watch ./server/bin/www",
+    "webpack:ser": "SET NODE_ENV = development & webpack serve --config ./webpack.dev.config.js --mode development",
+    "cleans": "rimraf dist-server",
+    "cleanc": "rimraf public/js",
+    "build:ser": "npm run cleans && babel ./server --out-dir dist-server --copy-files",
+    "build:cli": "npm run cleanc && webpack --config ./webpack.config.js --mode production",
+    "build": "npm run build:cli && npm run build:ser"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-handlebars": "^5.3.2",
+    "hbs": "^4.1.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.38.1",
+    "webpack-dev-middleware": "^5.0.0",
+    "webpack-hot-middleware": "^2.25.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/node": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-preset-minify": "^0.5.1",
+    "babel-watch": "^7.4.1",
+    "core-js": "^3.14.0",
+    "css-loader": "^5.2.6",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-webpack-plugin": "^2.5.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
